@@ -14,5 +14,6 @@ namespace Tienda_de_Ropa
         public string Talla { get; set; }
         public string Modelo { get; set; }
         public string Disponibles { get; set; }
+        public Object Imagen { get; set; }
     }
 }

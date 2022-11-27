@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_imagen = new System.Windows.Forms.PictureBox();
             this.txt_ID = new System.Windows.Forms.TextBox();
             this.txt_articulo = new System.Windows.Forms.TextBox();
             this.txt_marca = new System.Windows.Forms.TextBox();
@@ -49,8 +48,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_imagen)).BeginInit();
+            this.txt_disponible = new System.Windows.Forms.TextBox();
+            this.Imagen = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,19 +128,6 @@
             this.label7.Size = new System.Drawing.Size(90, 19);
             this.label7.TabIndex = 6;
             this.label7.Text = "Descripcion";
-            // 
-            // txt_imagen
-            // 
-            this.txt_imagen.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txt_imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.txt_imagen.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.txt_imagen.Image = ((System.Drawing.Image)(resources.GetObject("txt_imagen.Image")));
-            this.txt_imagen.Location = new System.Drawing.Point(22, 12);
-            this.txt_imagen.Name = "txt_imagen";
-            this.txt_imagen.Size = new System.Drawing.Size(332, 343);
-            this.txt_imagen.TabIndex = 7;
-            this.txt_imagen.TabStop = false;
-            this.txt_imagen.UseWaitCursor = true;
             // 
             // txt_ID
             // 
@@ -252,13 +240,30 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // txt_disponible
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(672, 418);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 25);
-            this.textBox1.TabIndex = 21;
+            this.txt_disponible.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_disponible.Location = new System.Drawing.Point(672, 420);
+            this.txt_disponible.Multiline = true;
+            this.txt_disponible.Name = "txt_disponible";
+            this.txt_disponible.Size = new System.Drawing.Size(184, 22);
+            this.txt_disponible.TabIndex = 16;
+            // 
+            // Imagen
+            // 
+            this.Imagen.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Imagen.Enabled = false;
+            this.Imagen.Location = new System.Drawing.Point(33, 45);
+            this.Imagen.Name = "Imagen";
+            this.Imagen.Size = new System.Drawing.Size(345, 322);
+            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Imagen.TabIndex = 21;
+            this.Imagen.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -268,11 +273,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(958, 698);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Imagen);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.txt_disponible);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_descripción);
@@ -281,7 +287,6 @@
             this.Controls.Add(this.txt_marca);
             this.Controls.Add(this.txt_articulo);
             this.Controls.Add(this.txt_ID);
-            this.Controls.Add(this.txt_imagen);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -293,7 +298,7 @@
             this.Name = "Form1";
             this.Text = "but";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +313,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox txt_imagen;
         private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.TextBox txt_articulo;
         private System.Windows.Forms.TextBox txt_marca;
@@ -321,7 +325,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_disponible;
+        private System.Windows.Forms.PictureBox Imagen;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
